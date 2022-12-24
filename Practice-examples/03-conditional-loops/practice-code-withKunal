@@ -1,0 +1,94 @@
+import java.util.Scanner;
+
+//public class Loops {
+//    public static void main(String[] args) {
+//        if statement
+//        int salary = 3000;
+//        if (salary > 2000) {
+//            salary = salary + 1000;
+//        } else {
+//            salary = salary + 200;
+//        }
+//        System.out.println(salary);
+
+//        for loop
+//        Q; print numbers from 1 to 5
+
+//        for (int num =1; num <= 5; num++) {
+//            System.out.println(num);
+//        }
+
+
+//        Q: iso daabac hello world 100 mar
+//        Scanner in = new Scanner(System.in);
+//        int great = in.nextInt();
+//        for (int i = 0; i <=100; great++) {
+//            System.out.println("hello world");
+//        }
+
+//        while loop
+//        while loop oo kuso dabacayo hello world 100 mar
+//        int great = 1;
+//        while (great <= 100) {
+//            System.out.println("Hello world");
+//            great++;
+//        }
+
+//        do while loop
+//        same question 100 mar iiso dabac hello world
+//        int great =1;
+//        do {
+//            System.out.println("hello world");
+//            great++;
+//        } while (great <= 100);
+
+//        find the largest number
+//        Scanner in = new Scanner(System.in);
+//        int a = in.nextInt();
+//        int b = in.nextInt();
+//        int c = in.nextInt();
+//        int max = a;
+//        if (b > a) {
+//            max = b;
+//        }
+//        if ( c > a) {
+//            max = c;
+//        }
+//        System.out.println(max);
+
+//        ama si fudud waxa samen karta sidan :
+//        System.out.println(Math.max(56, 23));
+//        wuxu kuso dabaca 56 cause iyada aya ween///
+
+//        Q: print the first letter??
+//        String word = "Juweria";
+//        System.out.println(word.charAt(3));
+//        wuxu kuso dabaca e maxayelay waxey ku jirta index 3 aad
+
+//        Q: find the fabbonacchi number 7th??
+//        Scanner in = new Scanner(System.in);
+//        int a = in.nextInt();
+//        int y = 0;
+//        int z = 1;
+//        int count = 2;
+//        while (count<=100) {
+//            int temp = y;
+//            y = y+z;
+//            z = temp;
+//            count++;
+//        }
+//        System.out.println(y);
+
+//        Q; find the number 7 occour in this the frequence??
+//        int n = 45654665;
+//        int count = 0;
+//        while (n>0) {
+//            int reminder = n%10;
+//            if (reminder == 6) {
+//                count++;
+//            }
+//            n = n%10;
+//        }
+//        System.out.println(count);
+    }
+}
