@@ -1,0 +1,155 @@
+//public class LinearSearch {
+//    public class linearSearch {
+//        public static void main(String[] args) {
+//        int[] nums = {2, 32, 12, 5, -5, 7};
+//        int targer = -5;
+//        int ans = linearsearch(nums, targer);
+//        System.out.println(ans);
+//    }
+////    Search in the array: return the index if the item found
+////    otherwise if the item not found return -1
+//    static int linearsearch(int[] arr, int targer) {
+//        if (arr.length==0) {
+//            return -1;
+//        }
+////        run a for loop
+//        for (int index = 0; index < arr.length; index++) {
+////            check for element at every index if its = target
+//            int element = arr[index];
+//            if (element == targer) {
+//                return index;
+//            }
+//        }
+////   this line will excute if non of the return estatement above have excuted
+////        hence the target not found
+//        return -1;
+
+//        waxaa rabnaa asigo index ka noso reurn garaenayo inan aragno
+//        int[] nums = {2, 32, 12, 5, -5, 7};
+//        int targer = 7;
+//        int ans = linearsearch(nums, targer);
+//        System.out.println(ans);
+//    }
+////    Search in the array: return the index if the item found
+////    otherwise if the item not found return -1
+//    static int linearsearch(int[] arr, int targer) {
+//        if (arr.length==0) {
+//            return -1;
+//        }
+////        run a for loop--inhence for looop
+//        for (int element : arr) {
+////            check for element at every index if its = target
+//            if (element == targer) {
+//                return element;
+//            }
+//        }
+////   this line will excute if non of the return estatement above have excuted
+////        hence the target not found
+//        return -1;
+
+//        hadi aa rabno in string aa so radino
+//        String name ="juweria";
+//        char target = 'g';
+//        System.out.println(search(name, target));
+//    }
+//    static boolean search(String str, char target) {
+//        if (str.length()==0) {
+//            return false;
+//        }
+//        for (int i = 0; i < str.length(); i++) {
+//            if (target == str.charAt(i)) {
+//                return true;
+//            }
+//        }
+//        return false;
+
+//        dhamaan magaca dhan soo hel oo iso dabac with array ahaan
+//        String name ="juweria";
+//        System.out.println(Arrays.toString(name.toCharArray()));
+//    }
+//    static boolean search(String str) {
+//        if (str.length()==0) {
+//            return false;
+//        }
+//        for (char ch : str.toCharArray()){
+//                return true;
+//            }
+//        return false;
+
+//        search 3 in the range or find the index of 3??
+//        int[] arr = {12, 2, 4, 3, 5, -1, 23};
+//        int target = 3;
+//        System.out.println(linearsearch2(arr,target,1, 4));
+//    }
+//        static int linearsearch2(int[] arr, int targer, int start, int end) {
+//        if (arr.length==0) {
+//            return -1;
+//        }
+////        run a for loop
+//        for (int index = start; index <= end; index++) {
+////            check for element at every index if its = target
+//            int element = arr[index];
+//            if (element == targer) {
+//                return index;
+//            }
+//        }
+//        return -1;
+
+//        find the minimun number in the array
+//        int[] arr = {12, 2, 4, 3, 5, -1, 23};
+//        System.out.println(min(arr));
+//    }
+//    static int min(int[] arr) {
+//        int ans = arr[0];
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i] < ans) {
+//                ans = arr[i];
+//            }
+//        }
+//        return ans;
+
+//        search in 2D arrays
+//        int[][] arr = {
+//                {25, 4, -5, 56},
+//                {1, 23, 54, 5},
+//        };
+//        int target = 54;
+//        int[] ans = search(arr, target);
+//        System.out.println(Arrays.toString(ans));
+//    }
+//    static int[] search(int[][] arr, int target) {
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = 0; j < arr[i].length; j++) {
+//                if (arr[i][j] == target) {
+//                    return new int[]{i, j};//to declaring ama initializing couse kor malagu so initialize garenin
+//                }
+//            }
+////            return new int[]{-1, -1}; //hadii kale iiso return gare -1 if the estatemnent not found
+//        }
+//        return new int[]{-1, -1}; //hadii kale iiso return gare -1 if the estatemnent not
+
+
+//        find the max number in 2D arrays
+//            int[][] arr = {
+//                    {25, 4, -5, 56},
+//                    {1, 23, 54, 5},
+//                    {8, -9, 57, 20}
+//            };
+//            int target = 54;
+//            int[] ans = max(arr, target);
+//            System.out.println(max(arr));
+//        }
+//
+//        static int max(int[][] arr) {
+//            int max = Integer.MIN_VALUE;
+//            for (int[] ints : arr) {
+//                for (int element : ints) {
+//                    if (element > max) {
+//                        max = element;
+//                    }
+//                }
+//            }
+//            return max;
+//        }
+//    }
+//}
