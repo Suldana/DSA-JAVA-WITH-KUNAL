@@ -1,0 +1,105 @@
+import java.util.Arrays;
+
+public class mergeSort {
+    public static void main(String[] args) {
+        int[] arr = {5, 4, 3, 2, 1};
+        arr = merge(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+    static int[] merge(int[] arr) {
+        if (arr.length == 1) {
+            return arr;
+        }
+        int mid = arr.length/2;
+//        hada u pass gare copy array ga  -- new copy of array been created and paste in recursion
+        int[] left = merge(Arrays.copyOfRange(arr, 0, mid));
+        int[] right = merge(Arrays.copyOfRange(arr, mid, arr.length));
+//        new function
+        return merging(left, right);
+    }
+
+    private static int[] merging(int[] left, int[] right) {
+//        hada ayuu labadoda isku merge garena
+        int[] mix = new int [left.length + right.length];
+//        hadi labadi lakala jabiyey midka hore i u bixino kankalena j u bixino
+        int i= 0;
+        int j = 0;
+        int k = 0; //midkan waa midkii sorted ka ahaa ee ka imadey labadi laso sort gareyey
+
+        while (i < left.length && j < right.length) {
+//            hada firi labadoda kii smaller ah i ama j
+            if (left[i] < right[j]) {
+//                hada mix kena shaqenayo waana ku xerenna
+                mix[k] = left[i];
+                i++;
+            } else {
+                mix[k] = right[j];
+                j++;
+            }
+//            everytime new element ayuu soo galina merge geena so waxa lenahay sas ku wad
+            k++;
+        }
+//        now waxa possiple ah in one of the arrays ka in uu complete aheen oo reminders ay jirraan tirooyin banaanka jiran
+//        add all remaining element into my array, -- either i will be smaller than or j will be smaller than
+        while (i < left.length){
+            mix[k] = left[i];
+            i++;
+            k++;
+        }
+        while (j < right.length){
+            mix[k] = right[j];
+            j++;
+            k++;
+        }
+        return mix;
+    }
+
+}
+
+            // quick sort example
+
+            import java.util.Arrays;
+
+            public class quickSort {
+                public static void main(String[] args) {
+                    int[] arr = {5, 4, 3, 2, 1};
+                    sort(arr, 0, arr.length-1);
+                    System.out.println(Arrays.toString(arr));;
+            //        Arrays.sort(arr);
+                }
+            
+                static void sort(int[] nums, int low, int hi) {
+                    if (low >= hi) {
+                        return;
+                    }
+                    int s = low;
+                    int e = hi;
+            //        pivot element u initilize garee
+                    int m = s + (e - s) / 2;
+                    int pivot = nums[m];
+            //        condition ka hada samee
+                    while (s <= e) {
+                        while (nums[s] < pivot) {
+                            s++;
+            //                now wax kaste waa ok in ay ka yaraato soo hore usii saco
+                        }
+                        while (nums[e] > pivot) {
+                            e--;
+                        }
+            //            now hadi uu ka weyneen oo loo baahan yahay in la swap gareeyo
+            //            if it already sorted not needed to swap
+                        if (s <= e) {
+                            int temp = nums[s];
+                            nums[s] = nums[e];
+                            nums[e] = temp;
+            //                after swap we will do
+                            s++;
+                            e--;
+                        }
+                    }
+            //        recursion is called
+            //        now my pivot is at correct index sort the halves or remains
+                    sort(nums, low, e);
+                    sort(nums, hi, s);
+                }
+            }
