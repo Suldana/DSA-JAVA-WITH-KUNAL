@@ -1,0 +1,319 @@
+import java.util.Scanner;
+
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner input = new Scanner(System.in);
+//        System.out.println(input.nextLine());
+//
+//    }
+//}
+
+//      Basics:
+//public class Basics {
+//    public static void main(String[] args) {
+//            int a = 10;
+//        if (a == 10){
+//            System.out.printf("hello world ");
+//        while loops
+//        int count = 1;
+//        while (count != 5) {
+//        System.out.println(count);
+//        count++;
+//        }
+//
+//        for loops
+//        for (int count = 1; count != 5; count++) {
+//            System.out.print(count);
+//        }
+//    }
+//}
+//      inputs:
+
+//import java.util.Scanner;
+//
+//public class Inputs {
+//    public static void main(String[] args) {
+//        Scanner input = new Scanner(System.in);
+////        System.out.print("Please input something: ");
+////        int rollno = input.nextInt();
+////        System.out.printf("Your roll Number is " + rollno);
+//
+//
+////        int a = 23_000_000;
+////        System.out.printf("a");
+//
+////       String name = input.next();
+////        System.out.printf("name");
+//        float marks = input.nextFloat();
+//        System.out.printf("marks");
+//    }
+//}
+//          permitives
+
+//public class Primitive {
+//    public static void main(String[] args) {
+//        int rollno = 64;
+//        char letter = 'r';
+//        float marks = 98.78f;
+//        double largeDecimalNumber = 26513.2655;
+//        long largeInteger = 15561331154512154l;
+//        boolean check = true;
+//
+//
+//    }
+//}
+
+
+//      Sum of Numbers:
+
+//import java.util.Scanner;
+//
+//public class Sum {
+//    public static void main(String[] args) {
+//        Scanner input = new Scanner(System.in);
+////        int num1 = input.nextInt();
+////        int num2 = input.nextInt();
+////
+////        int sum = num1 + num2;
+////        System.out.printf("sum=" + sum);
+//
+////        byte a = 40;
+////        byte b = 50;
+////        byte c = 100;
+////        int d = (a * b) / c;
+////        System.out.println("d");
+//
+//        int number = 'A';
+//        System.out.printf("नमस्ते");
+//    }
+//}
+
+//      If Conditions :
+
+//public class Conditions {
+//    public static void main(String[] args) {
+//
+////        if (salary > 10000) {
+////            salary = salary + 2000;
+////        } else {
+////            salary = salary + 1000;
+////        }
+//        int salary = 25400;
+//        if (salary > 10000) {
+//            salary += 2000;
+//        } else if (salary > 20000) {
+//            salary += 3000;
+//        } else {
+//            salary += 1000;
+//        }
+//        System.out.println(salary);
+//
+//    }
+//}
+
+//          Loops:
+
+//import java.util.Scanner;
+//
+//public class Loops {
+//    public static void main(String[] args) {
+//        Scanner in = new Scanner(System.in);
+//        for (int num = 1; num < 5; num += 1) {
+//            System.out.println(num);
+//        }
+//
+//        int n = in.nextInt();
+//        for (int num = 0; num <= 1; num++) {
+//            System.out.println(num);
+//        }
+//    }
+//}
+
+//      For Loops :
+
+//import java.util.Scanner;
+//
+//public class Forloop {
+//    public static void main(String[] args) {
+////        Scanner in = new Scanner(System.in);
+////
+//////        Fibonacci Numbers
+////
+////        int n = in.nextInt();
+////        int a = 0;
+////        int b = 1;
+////        int count = 2;
+////
+////        while (count <= n) {
+////            int temp = b;
+////            b = b + a;
+////            a = temp;
+////            count ++;
+//
+////        }
+//
+////        System.out.println(b);
+////    }
+//
+////        Counting Numbers
+////        how many times n occuring?
+//
+////        int n = 455536;
+//
+////        int count = 0;
+////        while (n > 0) {
+////            int rem = n % 10;
+////            if (rem == 5) {
+////                count++;
+////            }
+////            n = n / 10; // n / = 10
+////        }
+////        System.out.println(count);
+////    }
+//
+////        Reversing Numbers:
+//        int num = 551161;
+//
+//        int ans = 0;
+//        while (num >0) {
+//            int rem = num % 10;
+//            num /= 10;
+//            ans = ans * 10 + rem;
+//        }
+//        System.out.println(ans);
+//    }
+//}
+
+//      Temperature:
+
+//import java.util.Scanner;
+//
+//public class Temperature {
+//    public static void main(String[] args) {
+//        Scanner in = new Scanner(System.in);
+//        System.out.printf("please enter temp in C: ");
+//        float tempC = in.nextFloat();
+//        float tempF =  (tempC * 9/5) + 32;
+//        System.out.println(tempF);
+//    }
+//}
+
+//          If else:
+
+//public class Statement {
+//    public static void main(String[] args) {
+//        int salary = 25400;
+//
+//        if (salary > 10000) {
+//            salary += 2000;
+//        } else if (salary > 20000) {
+//            salary += 3000;
+//        } else {
+//            salary += 1000;
+//        }
+//
+//        System.out.println(salary);
+//    }
+//}
+
+//      Largest Numbers:
+
+//import java.util.Scanner;
+//
+//public class Largest {
+//    public static void main(String[] args) {
+//        Scanner in = new Scanner(System.in);
+//
+//        int a = in.nextInt();
+//        int b = in.nextInt();
+//        int c = in.nextInt();
+//
+////        Find the largest of 3 Numbers?
+////        int max = a;
+////        if (b > a) {
+////            max = b;
+////        }
+////        if (c > a) {
+////            max = c;
+////        }
+//
+////        int max = 0;
+////        if (a > b) {
+////            max = a;
+////        } else {
+////            max = b;
+////        }
+//
+////        System.out.println(max);
+//    }
+//
+//}
+//
+//          Alphapets:
+
+//import java.util.Scanner;
+//
+//public class Alphabetical {
+//    public static void main(String[] args) {
+//        Scanner in = new Scanner(System.in);
+//        char ch = in.next().trim().charAt(0);
+//
+//        if (ch >= 'a' && ch <= 'z') {
+//            System.out.println("Lowercase");
+//        } else {
+//            System.out.println("Uppercase");
+//        }
+//    }
+//}
+
+
+//      i think i repeated again this
+//public class Basics {
+//    public static void main(String[] args) {
+//            int a = 10;
+//        if (a == 10){
+//            System.out.printf("hello world ");
+//        while loops
+//        int count = 1;
+//        while (count != 5) {
+//        System.out.println(count);
+//        count++;
+//        }
+
+//        for loops
+//        for (int count = 1; count != 5; count++) {
+//            System.out.print(count);
+//        }
+//    }
+//}
+//import java.util.Scanner;
+//
+//public class Inputs {
+//    public static void main(String[] args) {
+//        Scanner input = new Scanner(System.in);
+////        System.out.print("Please input something: ");
+////        int rollno = input.nextInt();
+////        System.out.printf("Your roll Number is " + rollno);
+//
+//
+////        int a = 23_000_000;
+////        System.out.printf("a");
+//
+////       String name = input.next();
+////        System.out.printf("name");
+//        float marks = input.nextFloat();
+//        System.out.printf("marks");
+//    }
+//}
+//public class Primitive {
+//    public static void main(String[] args) {
+//        int rollno = 64;
+//        char letter = 'r';
+//        float marks = 98.78f;
+//        double largeDecimalNumber = 26513.2655;
+//        long largeInteger = 15561331154512154l;
+//        boolean check = true;
+//
+//
+//    }
+//}
