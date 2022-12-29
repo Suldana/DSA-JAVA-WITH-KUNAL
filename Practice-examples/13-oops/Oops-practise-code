@@ -1,0 +1,151 @@
+---Inheritance in Java:
+-Inheritance ga waxey ay object ga iyo behavior ka ba iska ga egyihin parent class.
+-The idea behind inheritance in Java is that you can create new classes that are built upon existing classes
+oo waxaa isticmale method ka parent classka .
+-The extends keyword: waxa la dhaha  you are making a new class that derives from an existing class.
+
+--tusaale:
+
+class Employee{  
+ float salary=40000;  
+}  
+class Programmer extends Employee{  
+ int bonus=10000;  
+ public static void main(String args[]){  
+   Programmer p=new Programmer();  
+   System.out.println("Programmer salary is:"+p.salary);  
+   System.out.println("Bonus of Programmer is:"+p.bonus);  
+}  
+}  
+
+---Single Inheritance Example:
+-When a class inherits another class, it is known as a single inheritance.
+---Tusaale:
+class Animal{  
+void eat(){System.out.println("eating...");}  
+}  
+class Dog extends Animal{  
+void bark(){System.out.println("barking...");}  
+}  
+class TestInheritance{  
+public static void main(String args[]){  
+Dog d=new Dog();  
+d.bark();  
+d.eat();  
+}}  
+
+---Multilevel Inheritance Example:
+--When there is a chain of inheritance, it is known as multilevel inheritance.
+---Tusaale:
+class Animal{  
+void eat(){System.out.println("eating...");}  
+}  
+class Dog extends Animal{  
+void bark(){System.out.println("barking...");}  
+}  
+class BabyDog extends Dog{  
+void weep(){System.out.println("weeping...");}  
+}  
+class TestInheritance2{  
+public static void main(String args[]){  
+BabyDog d=new BabyDog();  
+d.weep();  
+d.bark();  
+d.eat();  
+}}  
+
+---Hierarchical Inheritance Example:
+--When two or more classes inherits a single class, it is known as hierarchical inheritance.
+
+--Tusaale:
+
+class Animal{  
+void eat(){System.out.println("eating...");}  
+}  
+class Dog extends Animal{  
+void bark(){System.out.println("barking...");}  
+}  
+class Cat extends Animal{  
+void meow(){System.out.println("meowing...");}  
+}  
+class TestInheritance3{  
+public static void main(String args[]){  
+Cat c=new Cat();  
+c.meow();  
+c.eat();  
+//c.bark();//C.T.Error  
+}}  
+
+-----Java Polymorphism:
+----Method Overloading in Java:
+--waa class leh different parameters and methods but have one name.
+
+1) Method Overloading: changing no. of arguments
+--Tusaale:
+class Adder{  
+static int add(int a,int b){return a+b;}  
+static int add(int a,int b,int c){return a+b+c;}  
+}  
+class TestOverloading1{  
+public static void main(String[] args){  
+System.out.println(Adder.add(11,11));  
+System.out.println(Adder.add(11,11,11));  
+}}
+---Output:
+22
+33
+
+2) Method Overloading: changing data type of arguments
+-class Adder{  
+static int add(int a, int b){return a+b;}  
+static double add(double a, double b){return a+b;}  
+}  
+class TestOverloading2{  
+public static void main(String[] args){  
+System.out.println(Adder.add(11,11));  
+System.out.println(Adder.add(12.3,12.6));  
+}}  
+
+Output:
+22
+24.9
+
+-----Method Overriding in Java:
+--subclass (child class) has the same method as declared in the parent class, it is known as method overriding in Java.
+
+--Tusaale:
+//Creating a parent class  
+class Vehicle{  
+  void run(){System.out.println("Vehicle is running");}  
+}  
+//Creating a child class  
+class Bike extends Vehicle{  
+  public static void main(String args[]){  
+  //creating an instance of child class  
+  Bike obj = new Bike();  
+  //calling the method with child class instance  
+  obj.run();  
+  }  
+}  
+
+Output:
+Vehicle is running
+
+--Tusaale kale:
+//Java Program to illustrate the use of Java Method Overriding  
+//Creating a parent class.  
+class Vehicle{  
+  //defining a method  
+  void run(){System.out.println("Vehicle is running");}  
+}  
+//Creating a child class  
+class Bike2 extends Vehicle{  
+  //defining the same method as in the parent class  
+  void run(){System.out.println("Bike is running safely");}  
+  
+  public static void main(String args[]){  
+  Bike2 obj = new Bike2();//creating object  
+  obj.run();//calling method  
+  }  
+}  
+
