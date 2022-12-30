@@ -1,0 +1,89 @@
+
+1. What is linked list data structure?
+Linked list are most commonly used to handle dynamic data elements. 
+Linked list consists of nodes and a node consists of two fields one for storing data 
+and other for keeping the reference of next node.
+
+2. Why do we need linked list data structure??
+There are some important advantages to using linked lists over other linear data structures.
+This is unlike arrays, as they are resizable at runtime. Additionally, they can be easily inserted and deleted.
+
+3. What is the difference between array and linked list?
+There are some following differences between them:
+
+Arrays are data structures containing similar data elements, 
+whereas linked lists are non-primitive data structures containing unordered linked elements.
+In an array, elements are indexed, but in a linked list nodes are not indexed. 
+
+Arrays are of fixed size and their size is static but Linked lists are dynamic and flexible and can expand and shrink their size.
+
+Types of linked lists: 
+There are mainly three types of linked lists:
+
+1. Single-linked list
+2. Double linked list
+3. Circular linked list
+
+1. Singly-linked list
+Traversal of items can be done in the forward direction only due to the linking of every node to its next node.
+
+example Singly Linked List
+// Linked List Class
+class LinkedList {
+	Node head; // head of list
+
+	/* Node Class */
+	class Node {
+		int data;
+		Node next;
+
+		// Constructor to create a new node
+		Node(int d)
+		{
+			data = d;
+			next = null;
+		}
+	}
+}
+
+2. Doubly linked list
+Traversal of items can be done in both forward and backward directions as every node
+ contains an additional prev pointer that points to the previous node.
+
+Example of dubbly linked list
+
+// Class for Doubly Linked List
+public class DLL {
+	Node head; // head of list
+
+	/* Doubly Linked list Node*/
+	class Node {
+		int data;
+		Node prev;
+		Node next;
+
+		// Constructor to create a new node
+		// next and prev is by default initialized as null
+		Node(int d) { data = d; }
+	}
+}
+ 
+3. Circular linked lists
+A circular linked list is a type of linked list in which the first and the last nodes are also connected to each other
+ to form a circle, there is no NULL at the end. 
+
+example of circular linked lists
+public class DLL {
+	Node head; // head of list
+
+	/* Doubly Linked list Node*/
+	class Node {
+		int data;
+		Node prev;
+		Node next;
+
+		// Constructor to create a new node
+		// next and prev is by default initialized as null
+		Node(int d) { data = d; }
+	}
+}
