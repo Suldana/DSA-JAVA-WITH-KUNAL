@@ -1,0 +1,289 @@
+
+
+1. Sum triangle from array
+
+Example :
+ 
+
+Input : A = {1, 2, 3, 4, 5}
+Output : [48]
+         [20, 28] 
+         [8, 12, 16] 
+         [3, 5, 7, 9] 
+         [1, 2, 3, 4, 5] 
+
+Explanation :
+Here,   [48]
+        [20, 28] -->(20 + 28 = 48)
+        [8, 12, 16] -->(8 + 12 = 20, 12 + 16 = 28)
+        [3, 5, 7, 9] -->(3 + 5 = 8, 5 + 7 = 12, 7 + 9 = 16)
+        [1, 2, 3, 4, 5] -->(1 + 2 = 3, 2 + 3 = 5, 3 + 4 = 7, 4 + 5 = 9)
+
+// Java program to create Special triangle.
+import java.util.*;
+import java.lang.*;
+
+public class ConstructTriangle
+{
+	// Function to generate Special Triangle.
+	public static void printTriangle(int[] A)
+	{
+		// Base case
+		if (A.length < 1)
+			return;
+
+		// Creating new array which contains the
+		// Sum of consecutive elements in
+		// the array passes as parameter.
+		int[] temp = new int[A.length - 1];
+		for (int i = 0; i < A.length - 1; i++)
+		{
+			int x = A[i] + A[i + 1];
+			temp[i] = x;
+		}
+
+		// Make a recursive call and pass
+		// the newly created array
+		printTriangle(temp);
+
+		// Print current array in the end so
+		// that smaller arrays are printed first
+		System.out.println(Arrays.toString(A));
+	}
+
+	// Driver function
+	public static void main(String[] args)
+	{
+		int[] A = { 1, 2, 3, 4, 5 };
+		printTriangle(A);
+	}
+}
+
+Output
+48 
+20, 28 
+8, 12, 16 
+3, 5, 7, 9 
+1, 2, 3, 4, 5 
+
+2. Recursive Programs to find Minimum and Maximum elements of array
+
+Examples : 
+
+Input: arr = {1, 4, 3, -5, -4, 8, 6};
+Output: min = -5, max = 8
+
+Input: arr = {1, 4, 45, 6, 10, -8};
+Output: min = -8, max = 45
+
+// Recursive Java program to find minimum
+import java.util.*;
+
+class GFG {
+
+	// function to return minimum element using recursion
+	public static int findMinRec(int A[], int n)
+	{
+	// if size = 0 means whole array
+	// has been traversed
+	if(n == 1)
+		return A[0];
+		
+		return Math.min(A[n-1], findMinRec(A, n-1));
+	}
+	
+	// Driver code
+	public static void main(String args[])
+	{
+		int A[] = {1, 4, 45, 6, -50, 10, 2};
+		int n = A.length;
+		
+		// Function calling
+		System.out.println(findMinRec(A, n));
+	}
+}
+
+Output
+-50
+
+
+3. First uppercase letter in a string (Iterative and Recursive)-- using linear search.
+
+Examples : 
+
+Input : geeksforgeeKs
+Output : K
+
+Input  : geekS
+Output : S
+
+// Java program to find the first
+// uppercase letter using linear search
+import java.io.*;
+import java.util.*;
+
+class GFG {
+
+	// Function to find string which has
+	// first character of each word.
+	static char first(String str)
+	{
+		for (int i = 0; i < str.length(); i++)
+			if (Character.isUpperCase(str.charAt(i)))
+				return str.charAt(i);
+		return 0;
+	}
+	
+	// Driver program
+	public static void main(String args[])
+	{
+		String str = "geeksforGeeKS";
+		char res = first(str);
+		if (res == 0)
+			System.out.println("No uppercase letter");
+		else
+			System.out.println(res);
+	}
+}
+
+
+4. Program for length of a string using recursion
+
+Examples: 
+
+Input : str = "abcd"
+Output :4
+
+Input : str = "GEEKSFORGEEKS"
+Output :13
+
+// java program to calculate length of
+// a string using recursion
+import java.util.*;
+
+public class GFG{
+
+	/* Function to calculate length */
+	private static int recLen(String str)
+	{
+
+		// if we reach at the end of the string
+		if (str.equals(""))
+			return 0;
+		else
+			return recLen(str.substring(1)) + 1;
+	}
+
+	/* Driver program to test above function */
+	public static void main(String[] args)
+	{
+
+		
+		String str ="GeeksforGeeks";
+		System.out.println(recLen(str));
+	}
+}
+
+5. Recursive Bubble Sort
+// Java program for recursive implementation
+// of Bubble sort
+
+import java.util.Arrays;
+
+public class GFG
+{
+	// A function to implement bubble sort
+	static void bubbleSort(int arr[], int n)
+	{
+		// Base case
+		if (n == 1)
+			return;
+
+		int count = 0;
+		// One pass of bubble sort. After
+		// this pass, the largest element
+		// is moved (or bubbled) to end.
+		for (int i=0; i<n-1; i++)
+			if (arr[i] > arr[i+1])
+			{
+				// swap arr[i], arr[i+1]
+				int temp = arr[i];
+				arr[i] = arr[i+1];
+				arr[i+1] = temp;
+				count = count+1;
+			}
+
+		// Check if any recursion happens or not
+		// If any recursion is not happen then return
+		if (count == 0)
+			return;
+
+		// Largest element is fixed,
+		// recur for remaining array
+		bubbleSort(arr, n-1);
+	}
+	
+	// Driver Method
+	public static void main(String[] args)
+	{
+		int arr[] = {64, 34, 25, 12, 22, 11, 90};
+	
+		bubbleSort(arr, arr.length);
+		
+		System.out.println("Sorted array : ");
+		System.out.println(Arrays.toString(arr));
+	}
+}
+Output
+Sorted array : 
+11 12 22 25 34 64 90 
+
+6. Recursive Insertion Sort
+// Recursive Java program for insertion sort
+
+import java.util.Arrays;
+
+public class GFG
+{
+	// Recursive function to sort an array using
+	// insertion sort
+	static void insertionSortRecursive(int arr[], int n)
+	{
+		// Base case
+		if (n <= 1)
+			return;
+	
+		// Sort first n-1 elements
+		insertionSortRecursive( arr, n-1 );
+	
+		// Insert last element at its correct position
+		// in sorted array.
+		int last = arr[n-1];
+		int j = n-2;
+	
+		/* Move elements of arr[0..i-1], that are
+		greater than key, to one position ahead
+		of their current position */
+		while (j >= 0 && arr[j] > last)
+		{
+			arr[j+1] = arr[j];
+			j--;
+		}
+		arr[j+1] = last;
+	}
+	
+	// Driver Method
+	public static void main(String[] args)
+	{
+		int arr[] = {12, 11, 13, 5, 6};
+	
+		insertionSortRecursive(arr, arr.length);
+		
+		System.out.println(Arrays.toString(arr));
+	}
+}
+
+Output : 
+
+5 6 11 12 13 
+
